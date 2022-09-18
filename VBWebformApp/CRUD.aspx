@@ -1,15 +1,17 @@
-﻿<%@ Page Title="Home Page" Language="VB" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.vb" Inherits="VBWebformApp._Default" %>
+﻿<%@ Page Title="CRUD" Language="VB" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="CRUD.aspx.vb" Inherits="VBWebformApp.Contact" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <div>
-        <p class="lead">Jobs View</p>
+        <asp:Label class="lead" ID="lblJobCRUDMode" runat="server" Text="Jobs View"></asp:Label>
+        <asp:Button ID="btnSave" runat="server" Text="Save" />
+        <asp:Label ID="lblSaveResult" runat="server" Text=""></asp:Label>
     </div>
 
     <div class="row">
         <div class="col-md-2">
-            <p><asp:Label ID="Label1" runat="server" Text="Select Job"></asp:Label></p>
-            <p><asp:DropDownList ID="drpJobs" runat="server" Width="150px" AutoPostBack="True"></asp:DropDownList></p>
+            <p><asp:Label ID="Label1" runat="server" Text="Job Name"></asp:Label></p>
+             <p><asp:TextBox ID="txtJobName" runat="server"></asp:TextBox></p>
         </div>
         <div class="col-md-2">
             <p><asp:Label ID="Label2" runat="server" Text="Start Date"></asp:Label></p>
@@ -20,10 +22,9 @@
             <p><asp:TextBox ID="txtEndDate" runat="server"></asp:TextBox></p>
         </div>
         <div class="col-md-6">
-            <p><asp:Label ID="Label4" runat="server" Text="Comments"></asp:Label></p>
-            <p><asp:TextBox ID="txtcomments" runat="server" TextMode="MultiLine" Height="80px" Width="350px"></asp:TextBox></p>
+            <p><asp:Label ID="Label6" runat="server" Text="Comments"></asp:Label></p>
+            <p><asp:TextBox ID="txtComments" runat="server" TextMode="MultiLine" Height="80px" Width="350px"></asp:TextBox></p>
         </div>
-
     </div>
 
     <div class="row">

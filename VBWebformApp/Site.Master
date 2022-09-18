@@ -6,7 +6,7 @@
 <head runat="server">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Webform Access DB Example - My ASP.NET Application</title>
+    <title>Webform Access DB Example</title>
 
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
@@ -38,7 +38,17 @@
             </Scripts>
         </asp:ScriptManager>
 
-        <div class="container body-content">
+        <div class="clearfix" style="background-color: lightblue; border: 2px solid black">
+            <H2>Jobs Data</H2>
+            <ul style="list-style-type: none;">
+                <li><a runat="server" href="~/Default">Jobs</a></li>
+                <li><a runat="server" name="liAddJob" href="~/CRUD?mode=Add">Add Job</a></li>
+                <li><a runat="server" name="liEditJob" href="~/CRUD?mode=Edit">Edit Job</a></li>
+                <li><a runat="server" name="liDeleteJob" href="~/CRUD?mode=Delete">Delete Job</a></li>
+            </ul>
+        </div>
+
+        <div class="body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
             <hr />

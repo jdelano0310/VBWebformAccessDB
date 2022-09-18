@@ -27,7 +27,7 @@ Public Class _Default
     End Function
     Protected Function QueryDB(ByVal SQL As String) As DataTable
 
-        ' query the jobs table and return the data
+        ' run the passed query and return the data
         Dim cn As OleDbConnection = dbCon()
         Dim da As OleDbDataAdapter = New OleDbDataAdapter(SQL, cn)
 
